@@ -19,6 +19,7 @@ struct PostList {
     bool removePost(int postID);
     Post* findPost(int postID);
     void displayPosts() const;
+    bool isEmpty() const;
 };
 
 #endif
