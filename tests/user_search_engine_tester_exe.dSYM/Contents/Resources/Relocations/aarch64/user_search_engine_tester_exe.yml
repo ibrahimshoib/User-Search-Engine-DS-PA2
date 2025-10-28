@@ -1,0 +1,5 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     'tests/user_search_engine_tester_exe'
+relocations:     []
+...
