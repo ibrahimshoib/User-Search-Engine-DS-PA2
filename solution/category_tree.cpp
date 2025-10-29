@@ -10,11 +10,25 @@ using namespace std;
 CategoryNode::CategoryNode(const string& name) 
     : categoryName(name), totalPostCount(0) {
 }
+// category name
+// vector of children
+// parent
+// vector of posts in this category
+// totalPostCount = no of posts in this category and the sub categories.
 
 void CategoryNode::addChild(shared_ptr<CategoryNode> child) {
+    children.push_back(child);
 }
 
 bool CategoryNode::removeChild(const string& childName) {
+    // return false if not found
+    //remove from children
+    // clear parent pointer
+    // return true if succeeded
+    if (findChild(childName)==nullptr)
+        return false;
+    findChild(childName)->parent = nullptr;
+    for (int i=0;i<children.size(),i++)
 }
 
 shared_ptr<CategoryNode> CategoryNode::findChild(const string& childName) const {
